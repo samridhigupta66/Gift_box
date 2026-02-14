@@ -15,7 +15,7 @@
     }
 
     img {
-        width: 300px;   /* size change kar sakti ho */
+        width: 300px;   
         border-radius: 12px;
 
         /* 🔴 Red side glow effect */
@@ -29,7 +29,7 @@
 </head>
 <body>
 
-    <!-- yahan image ka exact naam likho -->
+    <!--gift.png-->
     <img src="gift.png" alt="My Image">
 
 </body>

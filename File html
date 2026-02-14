@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image with Red Glow</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+  }
+
+  .image-container {
+    position: relative;
+  }
+
+  .image-container img {
+    max-width: 80vw;
+    max-height: 80vh;
+    display: block;
+    filter: drop-shadow(0 0 20px red) drop-shadow(0 0 40px red);
+    transition: transform 0.5s;
+  }
+
+  /* Optional: thoda animation glow ke liye */
+  @keyframes glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 20px red) drop-shadow(0 0 40px red);
+    }
+    50% {
+      filter: drop-shadow(0 0 40px red) drop-shadow(0 0 80px red);
+    }
+  }
+
+  .image-container img.animate {
+    animation: glow 2s infinite;
+  }
+</style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="https://github.com/username/repo/blob/main/gift.png?raw=true" alt="My Image" class="animate">
+  </div>
+</body>
+</html>
